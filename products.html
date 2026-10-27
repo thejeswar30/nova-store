@@ -1,0 +1,74 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore electronics, lifestyle products and accessories at Nova Store.">
+    <title>Shop All Products | NOVA STORE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">NOVA<span>.</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Shop</a>
+            <a href="products.html?category=electronics">Electronics</a>
+            <a href="products.html?category=lifestyle">Lifestyle</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main class="shop-page">
+        <section class="shop-intro">
+            <span class="eyebrow">THE COMPLETE COLLECTION</span>
+            <h1>Find something<br><span>you'll love.</span></h1>
+            <p>Explore thoughtfully selected products for work, play and everyday living.</p>
+        </section>
+
+        <section class="catalog">
+            <div class="catalog-toolbar">
+                <div>
+                    <h2>All products</h2>
+                    <p id="product-count">Loading collection...</p>
+                </div>
+                <div class="catalog-controls">
+                    <input type="search" id="product-search" placeholder="Search products..." aria-label="Search products">
+                    <select id="sort-products" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to high</option>
+                        <option value="price-high">Price: High to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="shop-layout">
+                <aside class="filters">
+                    <h3>Categories</h3>
+                    <label><input type="radio" name="category" value="all" checked> All products</label>
+                    <label><input type="radio" name="category" value="electronics"> Electronics</label>
+                    <label><input type="radio" name="category" value="lifestyle"> Lifestyle</label>
+                    <label><input type="radio" name="category" value="accessories"> Accessories</label>
+                    <button type="button" id="clear-filters" class="clear-button">Clear filters</button>
+                </aside>
+                <div class="product-grid catalog-grid" id="all-products"></div>
+            </div>
+            <p id="shop-message" class="form-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">NOVA<span>.</span></a>
+        <p>Considered products. A better everyday.</p>
+        <div><a href="index.html">Home</a><a href="cart.html">Cart</a></div>
+        <small>© 2026 NOVA STORE. Student capstone project.</small>
+    </footer>
+</body>
+</html>
+```
